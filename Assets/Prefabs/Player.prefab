@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4564676448397304224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.74}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 885406637870087738}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87799ef17b6f644abbbead6189c1084, type: 2}
+  - {fileID: 2100000, guid: 4655f39a3ffa80144b9b040a7e2183ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6367694231920203829}
   - component: {fileID: 5432782826288407084}
   - component: {fileID: 8195625156456652084}
+  - component: {fileID: 8287968897021269650}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -159,7 +160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87799ef17b6f644abbbead6189c1084, type: 2}
+  - {fileID: 2100000, guid: 4655f39a3ffa80144b9b040a7e2183ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,4 +208,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf91ad990d21169469b23d2716b49529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 10
+--- !u!114 &8287968897021269650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095651391589295858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f2fba0ba3a85e4ea705440170ec098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 155227408484163302, guid: 0788453a57fb75741bcdbd0949f66330,
+    type: 3}
+  gunPosition: {fileID: 33505555029716145}

@@ -9,12 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 mouseWorldPosition;
     private Vector3 positionToMoveTo;
     private bool isMovingToNewPosition = false;
-
-    void Start()
-    {
-        
-    }
-
+    
     void Update()
     {
         RotatePlayerToFaceMouseWorldPosition();
@@ -29,20 +24,12 @@ public class PlayerMovement : MonoBehaviour
         {
             MovePlayerToNewPosition();
         }
-
-        //if (Vector3.Distance(transform.position, worldPosition) >= 5)
-        //{
-        //    Vector3 directionOfMovement = (worldPosition - transform.position).normalized;
-        //    Vector3 velocity = directionOfMovement * speed * Time.deltaTime;
-        //    transform.position += velocity;
-        //}
     }
 
     private void RotatePlayerToFaceMouseWorldPosition()
     {
         mouseWorldPosition = GetMouseWorldPosition();
         transform.LookAt(mouseWorldPosition);
-        print(mouseWorldPosition);
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -51,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         mousePos.z = Camera.main.transform.position.y;
         Vector3 newMouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         
-        // prevent player from facing the floor as player is 1unit in y-axis
+        // prevent player from facing the floor as player is 1 unit in y-axis
         newMouseWorldPosition.y = transform.position.y;
         return newMouseWorldPosition;
     }
