@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayerToNewPosition()
     {
-        if (Vector3.Distance(transform.position, positionToMoveTo) >= 0.5)
+        if (Vector3.Distance(transform.position, positionToMoveTo) >= 0.1)
         {
             Vector3 directionOfMovement = (positionToMoveTo - transform.position).normalized;
             Vector3 velocity = directionOfMovement * speed * Time.deltaTime;

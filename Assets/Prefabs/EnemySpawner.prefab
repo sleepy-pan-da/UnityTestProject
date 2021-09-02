@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 448273756763494953}
   - component: {fileID: 448273756763494952}
-  - component: {fileID: 3009070917452092863}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -44,33 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8be0f06c2a7a6f45a758f8e240c600a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
---- !u!114 &3009070917452092863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448273756763494954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa847903ddce68d418ae1e771a11e41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerDuration: 3
-  OnTimeOut:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 448273756763494952}
-        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
-        m_MethodName: SpawnEnemy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  isOneShot: 0
+  enemyToSpawn: {fileID: 0}
