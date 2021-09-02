@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private int speed;
+    [SerializeField]
+    private UnityEvent OnDeath;
     private Vector3 mouseWorldPosition;
     private Vector3 positionToMoveTo;
     private bool isMovingToNewPosition = false;
     
+
     void Update()
     {
         RotatePlayerToFaceMouseWorldPosition();
@@ -21,10 +25,7 @@ public class PlayerMovement : MonoBehaviour
             positionToMoveTo = GetMouseWorldPosition();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Restart();
-        }
+        
 
         if (isMovingToNewPosition)
         {
@@ -64,18 +65,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Die();
+            Die();  
         }
     }
 
     private void Die()
     {
         Destroy(gameObject);
-        Restart();
+        OnDeath.Invoke();
     }
 
-    private void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    
 }
