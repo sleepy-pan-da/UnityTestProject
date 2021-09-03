@@ -15,7 +15,8 @@ public class BulletBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        bulletRigidBody.AddForce(transform.forward * forceMultiplier, ForceMode.Impulse);
+        bulletRigidBody.velocity = transform.forward * forceMultiplier;
+        //bulletRigidBody.AddForce(transform.forward * forceMultiplier, ForceMode.VelocityChange);
     }
 
     private void OnBecameInvisible()

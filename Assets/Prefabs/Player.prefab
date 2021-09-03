@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 5500740477867821186}
   - component: {fileID: 8195625156456652084}
   - component: {fileID: 8287968897021269650}
+  - component: {fileID: 2049918787267940195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -255,3 +256,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 155227408484163302, guid: 0788453a57fb75741bcdbd0949f66330,
     type: 3}
+  gunCooldown: {fileID: 2049918787267940195}
+--- !u!114 &2049918787267940195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095651391589295858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa847903ddce68d418ae1e771a11e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerDuration: 0.5
+  OnTimeOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8287968897021269650}
+        m_TargetAssemblyTypeName: FireGun, Assembly-CSharp
+        m_MethodName: CanFireAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isOneShot: 1
+  timerSetUpOnStart: 0

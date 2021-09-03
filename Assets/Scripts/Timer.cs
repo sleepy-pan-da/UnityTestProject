@@ -11,13 +11,18 @@ public class Timer : MonoBehaviour
     private UnityEvent OnTimeOut;
     [SerializeField]
     private bool isOneShot;
+    [SerializeField]
+    private bool timerSetUpOnStart;
     private float timeRemaining;
     private bool timerIsRunning = false;
 
 
     void Start()
     {
-        SetUpTimer();
+        if (timerSetUpOnStart)
+        {
+            SetUpTimer();
+        }
     }
 
     void Update()
@@ -44,7 +49,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    private void SetUpTimer()
+    public void SetUpTimer()
     {
         timerIsRunning = true;
         timeRemaining = timerDuration;

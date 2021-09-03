@@ -61,6 +61,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   isOneShot: 0
+  timerSetUpOnStart: 1
 --- !u!114 &6651051324884251237
 MonoBehaviour:
   m_ObjectHideFlags: 0
