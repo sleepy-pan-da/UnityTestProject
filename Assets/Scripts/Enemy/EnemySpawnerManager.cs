@@ -13,7 +13,7 @@ public class EnemySpawnerManager : MonoBehaviour
 
     public void SpawnEnemyFromRandomSpawner()
     {
-        int spawnerIndex = Random.Range(0, numberOfSpawners - 1);
+        int spawnerIndex = Random.Range(0, numberOfSpawners);
         Transform chosenEnemySpawner = transform.GetChild(spawnerIndex);
         chosenEnemySpawner.gameObject.GetComponent<EnemySpawner>().SpawnEnemy();
     }

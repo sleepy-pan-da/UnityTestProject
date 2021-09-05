@@ -6,7 +6,7 @@ public class BulletBehaviour : MonoBehaviour
 {
     private Rigidbody bulletRigidBody;
     [SerializeField]
-    private float forceMultiplier;
+    private float speedMultiplier;
 
     void Start()
     {
@@ -15,8 +15,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        bulletRigidBody.velocity = transform.forward * forceMultiplier;
-        //bulletRigidBody.AddForce(transform.forward * forceMultiplier, ForceMode.VelocityChange);
+        bulletRigidBody.velocity = transform.forward * speedMultiplier;
     }
 
     private void OnBecameInvisible()
